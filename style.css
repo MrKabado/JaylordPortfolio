@@ -1,0 +1,304 @@
+/* === BASE STYLES === */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  background-color: #f9fafb;
+  color: #0f172a;
+}
+
+header {
+  background-color: #0f172a;
+  color: #ffffff;
+  padding: 15px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header h1 {
+  font-family: 'Roboto Slab', serif;
+  font-size: 24px;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #38bdf8;
+  transition: color 0.3s ease;
+  font-size: 16px;
+}
+
+nav a:hover {
+  color: #14b8a6;
+}
+
+main {
+  padding: 20px;
+}
+
+hr {
+  margin: 40px 0;
+}
+
+/* === HOME === */
+.home-holder {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 40px 20px;
+}
+
+.image-holder img {
+  width: 300px;
+  border-radius: 50%;
+  border: 5px solid #14b8a6;
+  background-color: #e2e8f0;
+}
+
+.intro-holder h3 {
+  font-size: 2rem;
+  line-height: 1.5;
+  font-family: 'Roboto Slab', serif;
+}
+
+.intro-holder span {
+  color: #14b8a6;
+}
+
+/* === ABOUT === */
+.about-holder {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.image2-holder img {
+  width: 300px;
+  border-radius: 10px;
+  border: 4px solid #14b8a6;
+}
+
+.aboutinfo-holder {
+  max-width: 500px;
+}
+
+.aboutinfo-holder h2 {
+  font-family: 'Roboto Slab', serif;
+  font-size: 2rem;
+}
+
+.aboutinfo-holder p {
+  font-size: 1rem;
+  text-align: justify;
+}
+
+/* === SKILLS === */
+.skills {
+  margin-top: 40px;
+}
+
+.skills h2 {
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.skills-holder {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.skills-holder div {
+  background-color: #0f172a;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.skills-holder div:hover {
+  background-color: #14b8a6;
+}
+
+/* === SERVICES === */
+.services h2 {
+  font-family: 'Roboto Slab', serif;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.services-holder {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.services-holder div {
+  background-color: #0f172a;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+
+.services-holder div:hover {
+  background-color: #14b8a6;
+}
+
+/* === CONTACT === */
+.contact-holder {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.infos {
+  flex: 1;
+  min-width: 250px;
+}
+
+.infos h2 {
+  font-family: 'Roboto Slab', serif;
+}
+
+.infos p {
+  margin: 10px 0;
+  font-size: 1rem;
+}
+
+.socmed-infos {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.socmed-infos a {
+  font-size: 30px;
+  color: #0f172a;
+  transition: transform 0.3s;
+}
+
+.socmed-infos a:hover {
+  transform: scale(1.1);
+}
+
+.form-holder {
+  flex: 1;
+  min-width: 280px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+form input, form textarea {
+  padding: 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  background-color: #e2e8f0;
+  font-size: 1rem;
+}
+
+button {
+  padding: 10px;
+  background-color: #14b8a6;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0f766e;
+}
+
+/* === MEDIA QUERIES === */
+
+/* Tablets */
+@media (max-width: 900px) {
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav {
+    justify-content: center;
+    margin-top: 10px;
+  }
+
+  .home-holder {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .intro-holder h3 {
+    font-size: 1.8rem;
+  }
+
+  .about-holder {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .skills-holder, .services-holder {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-holder {
+    flex-direction: column;
+  }
+
+  .socmed-infos {
+    justify-content: center;
+  }
+}
+
+/* Phones */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 20px;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
+
+  .intro-holder h3 {
+    font-size: 1.5rem;
+  }
+
+  .image-holder img, .image2-holder img {
+    width: 200px;
+  }
+
+  .skills h2, .services h2, .infos h2 {
+    font-size: 1.5rem;
+  }
+
+  form input, form textarea {
+    font-size: 0.9rem;
+  }
+}
